@@ -1,0 +1,25 @@
+Namespace(backend='vllm', base_url=None, host='localhost', port=8000, endpoint='/v1/completions', dataset=None, dataset_name='random', dataset_path=None, model='/root/Qwen2.5-32B-Instruct-GPTQ-Int8', tokenizer=None, best_of=1, use_beam_search=False, num_prompts=50, logprobs=None, request_rate=0.25, seed=0, trust_remote_code=False, disable_tqdm=False, profile=False, save_result=False, metadata=None, result_dir=None, result_filename=None, ignore_eos=True, percentile_metrics='ttft,tpot,itl', metric_percentiles='99', sonnet_input_len=550, sonnet_output_len=150, sonnet_prefix_len=200, sharegpt_output_len=None, random_input_len=0, random_output_len=150, random_range_ratio=1.0, random_prefix_len=8192, hf_subset=None, hf_split=None, hf_output_len=None)
+Starting initial single prompt test run...
+Initial test run completed. Starting main benchmark run...
+Traffic request rate: 0.25
+============ Serving Benchmark Result ============
+Successful requests:                     50        
+Benchmark duration (s):                  161.10    
+Total input tokens:                      409600    
+Total generated tokens:                  6728      
+Request throughput (req/s):              0.31      
+Output token throughput (tok/s):         41.76     
+Total Token throughput (tok/s):          2584.25   
+---------------Time to First Token----------------
+Mean TTFT (ms):                          2176.11   
+Median TTFT (ms):                        1723.77   
+P99 TTFT (ms):                           5443.34   
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          56.16     
+Median TPOT (ms):                        60.51     
+P99 TPOT (ms):                           73.06     
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           65.54     
+Median ITL (ms):                         71.26     
+P99 ITL (ms):                            177.47    
+==================================================
