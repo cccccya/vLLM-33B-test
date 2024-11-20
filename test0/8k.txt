@@ -2,3 +2,24 @@ Namespace(backend='vllm', base_url=None, host='localhost', port=8000, endpoint='
 Starting initial single prompt test run...
 Initial test run completed. Starting main benchmark run...
 Traffic request rate: inf
+============ Serving Benchmark Result ============
+Successful requests:                     992       
+Benchmark duration (s):                  1330.54   
+Total input tokens:                      8126464   
+Total generated tokens:                  148680    
+Request throughput (req/s):              0.75      
+Output token throughput (tok/s):         111.74    
+Total Token throughput (tok/s):          6219.37   
+---------------Time to First Token----------------
+Mean TTFT (ms):                          671998.72 
+Median TTFT (ms):                        670972.27 
+P99 TTFT (ms):                           1312203.62
+-----Time per Output Token (excl. 1st token)------
+Mean TPOT (ms):                          75.70     
+Median TPOT (ms):                        75.74     
+P99 TPOT (ms):                           80.90     
+---------------Inter-token Latency----------------
+Mean ITL (ms):                           76.28     
+Median ITL (ms):                         73.87     
+P99 ITL (ms):                            111.60    
+==================================================
